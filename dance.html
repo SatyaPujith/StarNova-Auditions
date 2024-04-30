@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <title>STARNOVA</title>
+    <style>
+        .container {
+            align:center;
+        }
+        .navbar-brand {
+            font-family: Algerian, sans-serif;
+            font-size: 1.5em;
+        }
+
+        .container {
+            padding-top: 60px; /* Adjusted padding to accommodate the fixed navigation bar */
+            max-width: 100%;
+            overflow-x: hidden; /* Hide horizontal scrollbar */
+            position: relative; /* Added position relative */
+            z-index: 0; /* Added z-index to ensure the cards are behind the navigation bar */
+        }
+
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 20px;
+            box-sizing: border-box;
+            justify-content: space-between; /* Adjusted to space cards evenly */
+        }
+
+        .card {
+            width: calc(30% - 10px); /* Two cards per row with a small gap */
+            background-color: #F8F8FF;
+            border: thick solid black;
+            border-radius: 10px;
+            margin-bottom: 20px; /* Added margin between rows of cards */
+            transition: transform 0.3s ease;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center content horizontally */
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card-img-top {
+            padding: 20px; /* Added padding to center the image */
+            width: 70%;
+            height: auto;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .card-body {
+            padding: 10px;
+            text-align: center;
+        }
+
+        .card-title {
+            margin: 0;
+        }
+
+        .card-text {
+            margin: 30px 0;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">STARNOVA</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="file:///C:/Users/SATYA%20POOJITH/Desktop/demo.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        Filters
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="file:///C:/Users/SATYA%20POOJITH/Desktop/auditions.html">Auditions</a></li>
+                        <li><a class="dropdown-item" href="#">Competitions</a></li>
+                        <!-- Add more filter options as needed -->
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        Login
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><a class="dropdown-item" href="#">Login as User</a></li>
+                        <li><a class="dropdown-item" href="#">Login as Organization</a></li>
+                        <!-- Add more login options as needed -->
+                    </ul>
+                </li>
+                <!-- Add more nav items if needed -->
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <div class="card-container">
+        <div class="card" onclick="navigateTo('url1.html')">
+            <img src="https://upload.wikimedia.org/wikipedia/en/b/b7/India%27s_Best_Dancer_logo.webp"  alt= " class="card-img-top" alt="...">
+            <div class="card-body">
+                <h1 class="card-title">India's Best Dancer</h1>
+                <p class="card-text">DATE:10-04-2024 - 20-04-2024</p>
+                <p class="card-text">TIMINGS: 1PM-8PM</p>  
+                <p class="card-text">Jaipur,Delhi,Guwahati,Kolkata,Lucknow</p>
+            </div>
+        </div>
+
+        <div class="card" onclick="navigateTo('url2.html')">
+            <img src="https://upload.wikimedia.org/wikipedia/en/f/f9/Super_Dancer.png " alt="...">
+            <div class="card-body">
+                <h1 class="card-title">Supper Dancer</h1>
+                <p class="card-text">DATE:01-04-2024</p>
+                <p class="card-text">TIMINGS: 11AM-6PM</p>
+                <p class="card-text">Guwahati Medical College Hospital Auditorium GMCH Road, Bangagarh, Guwahati 781005, Assam</p>
+            </div>
+        </div>
+
+        <div class="card" onclick="navigateTo('url3.html')">
+            <img src="https://m.media-amazon.com/images/M/MV5BM2RjNzRlNjktNGNiZi00NDhkLWExOTktNmRlMzdmOTQwMDMzXkEyXkFqcGdeQXVyOTgyOTAwMTk@._V1_.jpg
+ " class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Dance India Dance</h5>
+                <p class="card-text">DATE:8-01-2024</p>
+                <p class="card-text">TIMINGS: 10AM-6PM</p>
+                <p class="card-text">All India</p>
+                <p>Studio Phone: +91-9177858686. Studio Manager: 040-48574060</p>
+            </div>
+        </div>
+
+        <div class="card" onclick="navigateTo('url4.html')">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/0/0c/IGT_Logo.png" class="card-img-top" alt="...">
+            <div class= " alt="...">
+            <div class="card-body">
+                <h1 class="card-title">India's Got Talent</h1>
+                <p class="card-text">DATE:09-05-2024</p>
+                <p class="card-text">TIMINGS: 12AM-7PM</p>
+                <p class="card-text">Murasoli Maran Towers 73, MRC Nagar Main Road, MRC Nagar, Chennai 600 028, Tamil Nadu, India.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    function navigateTo(url) {
+        window.location.href = url;
+    }
+</script>
+
+</body>
+</html>
+

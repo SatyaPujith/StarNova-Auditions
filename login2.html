@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://getbootstrap.com/docs/5.3/assets/css/docs.css" rel="stylesheet">
+    <title>STARNOVA</title>
+    <style>
+        .navbar-brand {
+            font-family: Algerian, sans-serif;
+            font-size: 1.5em;
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f1f1f1;
+        }
+
+        .container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        input[type="email"],
+        input[type="password"],
+        button,
+        .forgot-password,
+        .signup-link {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        button {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        .forgot-password, .signup-link {
+            background: none;
+            border: none;
+            color: #007bff;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="#">STARNOVA</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="file:///C:/Users/SATYA%20POOJITH/Desktop/demo.html">Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="filtersDropdown" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        Filters
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="filtersDropdown">
+                        <li><a class="dropdown-item" href="file:///C:/Users/SATYA%20POOJITH/Desktop/auditions.html">Auditions</a></li>
+                        <li><a class="dropdown-item" href="#">Competitions</a></li>
+                        <!-- Add more filter options as needed -->
+                    </ul>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="loginDropdown" role="button" data-bs-toggle="dropdown"
+                       aria-expanded="false">
+                        Login
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="loginDropdown">
+                        <li><a class="dropdown-item" href="#">Login as User</a></li>
+                        <li><a class="dropdown-item" href="#">Login as Organization</a></li>
+                        <!-- Add more login options as needed -->
+                    </ul>
+                </li>
+                <!-- Add more nav items if needed -->
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<div class="container">
+    <h2>Login</h2>
+    <form id="loginForm" onsubmit="return validateForm()">
+        <input type="email" name="email" placeholder="Email" required>
+        <input type="password" name="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+        <button type="button" class="forgot-password" onclick="forgotPassword()">Forgot Password?</button>
+        <button type="button" class="signup-link" onclick="redirectToSignUp()">Don't have an account? Register here</button>
+        <div id="errorMessage" class="error-message" style="display: none;"></div>
+    </form>
+</div>
+
+<!-- JavaScript to redirect to another page -->
+<script>
+    function validateForm() {
+        const email = document.getElementById('loginForm').elements['email'].value.trim();
+        const password = document.getElementById('loginForm').elements['password'].value.trim();
+
+        if (!email || !password) {
+            alert("Please enter both email and password.");
+            return false;
+        }
+
+        // Redirect to the next page
+        redirectToAnotherPage();
+        
+        // Prevent the default form submission
+        return false;
+    }
+
+    function redirectToAnotherPage() {
+        window.location.href = 'file:///C:/Users/SATYA%20POOJITH/Desktop/demo.html'; // Change the URL to the desired page
+    }
+
+    // Forgot Password functionality
+    function forgotPassword() {
+        const email = prompt("Please enter your email:");
+        if (email) {
+            // Implement your forgot password logic here
+            alert("Forgot Password functionality is not implemented.");
+        }
+    }
+
+    // Redirect to Sign Up page
+    function redirectToSignUp() {
+        // Add your code to redirect to the Sign Up page
+        console.log("Redirecting to Sign Up page...");
+    }
+</script>
+</body>
+</html>
